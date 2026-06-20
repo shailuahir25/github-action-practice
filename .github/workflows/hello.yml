@@ -2,7 +2,8 @@
 name: hello workflow
 on:
   push:
-    branchs: main
+    branches: main
+    
     paths: -"**.yml"
 jobs:
   greet:
