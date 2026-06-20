@@ -1,8 +1,10 @@
----
 name: hello workflow
 on:
   push:
-    branches: main paths:"*.yml"
+    branches:
+      - main 
+    paths:
+      - "*.yml"
 jobs:
   greet:
     runs-on: ubuntu-latest
