@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - main 
-    paths:
-      -'*.yml'
+ #   paths:
+ #    -'*.yml'
 jobs:
   greet:
     runs-on: ubuntu-latest
