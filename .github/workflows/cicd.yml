@@ -1,7 +1,15 @@
----
 name: cicd
 on:
-  workflow_dispatch: null
+  workflow_dispatch:
+   inputs:
+      environment:
+        description: 'this is the envorment value where this workflow run'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - qa
 jobs:
   code:
     runs-on: ubuntu-latest
