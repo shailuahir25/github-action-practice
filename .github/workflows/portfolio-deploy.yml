@@ -1,0 +1,33 @@
+
+name: portfolio-depoy
+/* on:
+  push:
+   branchs:
+    -main */
+    
+  workflow_dispatchL: 
+
+  permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+job:
+
+deploy:
+ runs-on: ubuntu-latest
+ 
+steps:
+  - name: checkout code
+  uses: actions/checkout@v5
+
+  - name: setup pges
+    uses: actions/configure-pages@v5
+
+  - name: static code artifacte
+    uses: actions/uploade-pages-artifact@v4
+    with:
+    path: '.'
+
+  - name: deploy to github-pages
+    uses: acrions/deploy-pages@v4
