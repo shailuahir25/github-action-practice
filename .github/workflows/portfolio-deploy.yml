@@ -1,10 +1,6 @@
 name: portfolio-deploy
-
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+  workflow_dispatch: null
 
 permissions:
   contents: read
